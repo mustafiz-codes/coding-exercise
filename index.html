@@ -11,26 +11,20 @@
   <body>
     <div class="container-fluid bg-gray">
       <div class="row">
-        <!-- Colorful boxes here -->
         <div class="flex-container w-70">
-          <ul id="box-items">
-            <!-- It Should be dynamic and rendered by dom manipulation -->
-            <li class="box-item border-color bg-color text">1</li>
-            <li class="box-item border-color bg-color text">2</li>
-            <li class="box-item border-color bg-color text">3</li>
-            <li class="box-item border-color bg-color text">4</li>
-            <li class="box-item border-color bg-color text">5</li>
-            <li class="box-item border-color bg-color text">6</li>
-            <li class="box-item border-color bg-color text">7</li>
-            <li class="box-item border-color bg-color text">8</li>
-            <li class="box-item border-color bg-color text">9</li>
-          </ul>
+          <ul id="box-items"></ul>
         </div>
-
-        <!-- Buttons -->
         <div class="flex-container w-30">
-          <button class="btn bg-lightBlue">Shuffle</button>
-          <button id="sortButton" class="btn bg-lightBlue">Sort</button>
+          <button class="btn bg-lightBlue" onclick="generateNumber('shuffle')">
+            Shuffle
+          </button>
+          <button
+            id="sortButton"
+            class="btn bg-lightBlue"
+            onclick="generateNumber('sort')"
+          >
+            Sort
+          </button>
         </div>
       </div>
     </div>
