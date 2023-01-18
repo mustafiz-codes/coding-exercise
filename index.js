@@ -16,21 +16,29 @@ const generateNumber = (type) => {
   parent.innerHTML = "";
   let numbersArray = [1, 2, 3, 4, 5, 6, 7, 8, 9]; // this array for random number selection process
   for (let i = 1; i <= 9; i++) {
-    let item = document.createElement("li");
+    let boxItem = document.createElement("li");
     let randomColor = chooseRandomColor(0, colors.length - 1); // random color picker from colors array
 
     if (type === "shuffle") {
       let randomNumber = chooseRandomNumber(0, numbersArray.length); // pick remaining numbers from the numbersArray
       let numberValue = numbersArray.splice(randomNumber - 1, 1); // remove the picked number from numbersArray
-      item.textContent = numberValue + "";
-    } else {
-      item.textContent = i + "";
-    }
-    item.setAttribute("class", "box-item border-color bg-color text"); // add design in dynamic way
-    item.style.backgroundColor = randomColor;
-    item.style.borderLeft = "10px solid " + randomColor;
+      boxItem.textContent = numberValue + "";
 
-    parent.appendChild(item);
+      //   enable sorting button
+      let sortButton = document.querySelector("#sortButton");
+      sortButton.disabled = false;
+    } else {
+      boxItem.textContent = i + "";
+
+      //   disable sorting because it's already sorted
+      let sortButton = document.querySelector("#sortButton");
+      sortButton.disabled = true;
+    }
+    boxItem.setAttribute("class", "box-item border-color bg-color text"); // add design in dynamic way
+    boxItem.style.backgroundColor = randomColor;
+    boxItem.style.borderLeft = "10px solid " + randomColor;
+
+    parent.appendChild(boxItem);
   }
 };
 
