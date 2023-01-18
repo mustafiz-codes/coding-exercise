@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.row {
+  display: flex;
+}
+.flex-container {
+  background-color: #fff;
+  padding: 10px;
+}
+
+.flex-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+.flex-container ul li {
+  list-style: none;
+  flex: 0 0 33.333333%;
+}
+
+.box-item {
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg-color {
+  background-color: #2f454e;
+}
+
+.text {
+  color: white;
+  font-weight: 900;
+  font-size: 1.4em;
+}
+
+.bg-gray {
+  background-color: #bfbfbf;
+}
+
+.w-70 {
+  width: 70%;
+}
+.w-30 {
+  width: 30%;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #72c3dc;
+  margin-bottom: 5px;
+  border: none;
+}
+/* 
+  .bg-black {
+    background-color: #000000;
+  }
+  .bg-white {
+    background-color: #ffffff;
+  }
+  .bg-darkGray {
+    background-color: #333333;
+  }
+  .bg-lightGray {
+    background-color: #efefef;
+  }
+  .bg-gray {
+    background-color: #bfbfbf;
+  }
+  .bg-lightBlue {
+    background-color: #72c3dc;
+  }
+  .bg-blue {
+    background-color: #2b8ead;
+  }
+  .bg-slate {
+    background-color: #6f98a8;
+  }
+  .bg-darkBlue {
+    background-color: #2f454e;
+  }
+  .bg-mb-lightGray {
+    background-color: #efefef;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    .bg-border-slate {
+      background-color: #efefef;
+    }
+  } */
+
+@media only screen and (max-device-width: 600px) {
+  .w-30 {
+    width: auto;
+  }
+  .w-70 {
+    width: auto;
+  }
+  .row {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .flex-container {
+    flex-direction: column;
+  }
+  .flex-container ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 0;
+  }
+  .flex-container ul li {
+    list-style: none;
+    flex: 0%;
+  }
+  .box-item {
+    margin-bottom: 10px;
+    padding: 10px 0;
+  }
+
+  .bg-color {
+    background-color: #efefef !important;
+  }
+  .text {
+    color: black;
+    font-weight: 900;
+    font-size: 1.4em;
+  }
+}
+
+@media (min-width: 601px) {
+  .box-item {
+    border-left: 0px solid !important;
+  }
+}
